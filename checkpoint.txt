@@ -1,0 +1,81 @@
+1)
+
+
+function isLeapYear(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+let year = parseInt(prompt("Enter a year to check if it's a leap year:"));
+if (isLeapYear(year)) {
+    alert(year + " is a leap year.");
+} else {
+    alert(year + " is not a leap year.");
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2)
+
+
+function getTicketPrice(age) {
+    if (age <= 12) {
+        return "$10";
+    } else if (age >= 13 && age <= 17) {
+        return "$15";
+    } else if (age >= 18) {
+        return "$20";
+    }
+}
+
+let age = parseInt(prompt("Enter your age to get the movie ticket price:"));
+let price = getTicketPrice(age);
+alert("Your movie ticket price is: " + price);
+ 
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3)
+
+
+function isPalindrome(str) {
+    str = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+    if (str.length <= 1) {
+        return true;
+    }
+
+    if (str[0] === str[str.length - 1]) {
+        return isPalindrome(str.slice(1, str.length - 1));
+    } else {
+        return false;
+    }
+}
+
+let inputString = prompt("Enter a string to check if it's a palindrome:");
+if (isPalindrome(inputString)) {
+    alert("The string is a palindrome.");
+} else {
+    alert("The string is not a palindrome.");
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4)  
+
+
+function fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+let n = parseInt(prompt("Enter the position in the Fibonacci sequence (n):"));
+let result = fibonacci(n);
+alert("The " + n + "th Fibonacci number is: " + result);
